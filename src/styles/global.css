@@ -34,8 +34,8 @@ body {
 	font-family: 'Atkinson', sans-serif;
 	margin: 0;
 	padding: 0;
+	height: 100%;
 	text-align: left;
-	background: linear-gradient(var(--gray-gradient)) no-repeat;
 	background-size: 100% 600px;
 	word-wrap: break-word;
 	overflow-wrap: break-word;
@@ -44,10 +44,9 @@ body {
 	line-height: 1.7;
 }
 main {
-	width:722px;
-	max-width: calc(100% - 2em);
-	margin: auto;
-	padding: 3em 1em;
+	background-color: #fff;
+	margin: 0;
+	padding: 3em 4em;
 }
 h1,
 h2,
