@@ -1,6 +1,18 @@
-section{
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+/* Main container to hold sections */
+.main-page {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Sections should always be full-screen */
+section {
   background-color: linear;
-  height: max-content;
   border-radius: 1em;
   padding: 3em;
   margin-bottom: 8em;
@@ -10,21 +22,22 @@ section{
       4px 8px 8px hsl(220deg 60% 50% / 0.2),
       8px 16px 16px hsl(220deg 60% 50% / 0.2),
       16px 32px 32px hsl(220deg 60% 50% / 0.2);
-  transition: opacity 2s ease-in-out;
-}
-/* When hovering over any section, make others fade */
-main:hover section {
-  opacity: 0;
+  transition: opacity 1s ease-in-out, transform 0.4s ease-in-out;
 }
 
-/* Keep the hovered section fully visible */
+/* Background colors for each section */
+
+section:nth-child(1) { background: linear-gradient(45deg, #5b86e5, #36d1dc); }
+section:nth-child(3) { background: linear-gradient(45deg, #5b86e5, #36d1dc); }
+
+/* Fade out all sections except the hovered one */
+main:hover section {
+  opacity: 0.1;
+}
+
+/* The hovered section remains fully visible and increases in size */
 section:hover {
   opacity: 1 !important;
+  transform: scale(1.05);  /* Increases size by 5% */
+  z-index: 10;  /* Ensures it stays on top */
 }
-.main-page{
-  display: flex;
-  flex-direction: column;
-}
-
-
-
